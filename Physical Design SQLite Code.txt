@@ -1,12 +1,12 @@
+DROP TABLE Project_ProjectType;
+DROP TABLE Employee_Project; 
+DROP TABLE Employees;
 DROP TABLE Salaries;
+DROP TABLE Projects;
 DROP TABLE Managers;
 DROP TABLE Budgets;
 DROP TABLE ProjectTypes;
 DROP TABLE Clients;
-DROP TABLE Employees;
-DROP TABLE Projects;
-DROP TABLE Employee_Project; 
-DROP TABLE Project_ProjectType;
 
 CREATE TABLE Salaries(
 YearsInCompany INTEGER NOT NULL,
@@ -18,7 +18,7 @@ PRIMARY KEY (YearsInCompany, Specialization)
 CREATE TABLE Managers( 
 ManagerID INTEGER NOT NULL PRIMARY KEY,
 ManagerName CHAR(100),
-Street Address CHAR(128),
+StreetAddress CHAR(128),
 City CHAR(100),
 State CHAR(64),
 ZipCode INTEGER,
@@ -48,7 +48,7 @@ PhoneNumber Char(20)
 );
 
 CREATE TABLE Employees(
-EmployeeID INTEGER,
+EmployeeID INTEGER NOT NULL PRIMARY KEY,
 ManagerID INTEGER,
 EmployeeName Char(100),
 StreetAddress Char(128),
@@ -61,8 +61,7 @@ SSN Char(20),
 Specialization Char(64),
 YearsInCompany INTEGER,
 FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
-FOREIGN KEY (Specialization) REFERENCES Salaries (Specialization),
-FOREIGN KEY (YearsInCompany) REFERENCES Salaries (YearsInCompany)
+FOREIGN KEY (Specialization, YearsInCompany) REFERENCES Salaries (Specialization, YearsInCompany)
 );
 
 CREATE TABLE Projects(
@@ -76,7 +75,7 @@ EndDate date,
 Duration time,
 FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
 FOREIGN KEY (ClientID) REFERENCES Clients (ClientID),
-FOREIGN KEY (Duration) REFERENCES Budget (Duration)
+FOREIGN KEY (Duration) REFERENCES Budgets (Duration)
 );
 
 CREATE TABLE Employee_Project(
@@ -94,3 +93,28 @@ PRIMARY KEY (ProjectType, ProjectID),
 FOREIGN KEY (ProjectType) REFERENCES ProjectTypes (ProjectType),
 FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
 );
+
+-- Insertion
+
+INSERT INTO Managers VALUES 
+(1, "Manager1", "123 Street Way", "San Jose", "California", 11111, "email1", "111-111-1111");
+
+INSERT INTO Clients VALUES
+(1, "Client1", "Tech Corporaton", "789 Maple St", "Milpita", "California", 12345, "email2", "222-222-2222");
+
+INSERT INTO Salaries Values (1, "Computer Scientist", 25000.00);
+
+-- 2 Digit
+INSERT INTO Employees VALUES
+(10, 1, "Employee1", "231 Apple Way", "San Jose", "California", 54321, "333-333-3333", "email3", "321-65-3154", "Computer Scientist", 1);
+
+INSERT INTO Budgets Values ("1 Month", 10000.00);
+-- 3 Digit
+INSERT INTO Projects VALUES
+(100, 1, 1, "Project1", "Project 1 Description", "5/4/23", "6/4/23", "1 Month");
+
+INSERT INTO Employee_Project VALUES (10,100);
+
+INSERT INTO ProjectTypes Values ("AI");
+
+INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES ("AI", 100);
