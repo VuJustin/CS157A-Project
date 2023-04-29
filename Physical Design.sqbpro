@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/saims/PhysicalDesign.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="250"/><column_width id="3" width="2685"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainBudgets"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Budgets" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="64"/><column index="2" value="54"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CD" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="129"/><column index="2" value="168"/><column index="3" value="144"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CD_Record_Label" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="267"/><column index="2" value="129"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Clients" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="58"/><column index="2" value="79"/><column index="3" value="76"/><column index="4" value="104"/><column index="5" value="68"/><column index="6" value="44"/><column index="7" value="58"/><column index="8" value="131"/><column index="9" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employee_Project" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="83"/><column index="2" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employees" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="83"/><column index="2" value="79"/><column index="3" value="104"/><column index="4" value="104"/><column index="5" value="40"/><column index="6" value="44"/><column index="7" value="58"/><column index="8" value="97"/><column index="9" value="40"/><column index="10" value="40"/><column index="11" value="96"/><column index="12" value="118"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Managers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="79"/><column index="3" value="105"/><column index="4" value="58"/><column index="5" value="44"/><column index="6" value="58"/><column index="7" value="128"/><column index="8" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="ProjectTypes" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Project_ProjectType" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/><column index="2" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Projects" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="69"/><column index="2" value="79"/><column index="3" value="58"/><column index="4" value="90"/><column index="5" value="128"/><column index="6" value="73"/><column index="7" value="62"/><column index="8" value="64"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="RecordLabel" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="267"/><column index="2" value="300"/><column index="3" value="272"/><column index="4" value="101"/><column index="5" value="155"/><column index="6" value="205"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Salaries" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="118"/><column index="2" value="96"/><column index="3" value="49"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Song" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="144"/><column index="2" value="199"/><column index="3" value="219"/><column index="4" value="208"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="State" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="205"/><column index="2" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="df" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="121"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">DROP TABLE Salaries;
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/saims/PhysicalDesign.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="250"/><column_width id="3" width="2766"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainBudgets"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Budgets" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="64"/><column index="2" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CD" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="129"/><column index="2" value="168"/><column index="3" value="144"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CD_Record_Label" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="267"/><column index="2" value="129"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Clients" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="58"/><column index="2" value="79"/><column index="3" value="76"/><column index="4" value="104"/><column index="5" value="68"/><column index="6" value="44"/><column index="7" value="58"/><column index="8" value="131"/><column index="9" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employee_Project" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="83"/><column index="2" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employees" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="83"/><column index="2" value="79"/><column index="3" value="104"/><column index="4" value="104"/><column index="5" value="40"/><column index="6" value="44"/><column index="7" value="58"/><column index="8" value="97"/><column index="9" value="40"/><column index="10" value="40"/><column index="11" value="96"/><column index="12" value="118"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Managers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="79"/><column index="3" value="105"/><column index="4" value="58"/><column index="5" value="44"/><column index="6" value="58"/><column index="7" value="128"/><column index="8" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="ProjectTypes" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Project_ProjectType" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/><column index="2" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Projects" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="69"/><column index="2" value="79"/><column index="3" value="58"/><column index="4" value="90"/><column index="5" value="128"/><column index="6" value="73"/><column index="7" value="62"/><column index="8" value="64"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="RecordLabel" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="267"/><column index="2" value="300"/><column index="3" value="272"/><column index="4" value="101"/><column index="5" value="155"/><column index="6" value="205"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Salaries" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="118"/><column index="2" value="96"/><column index="3" value="49"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Song" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="144"/><column index="2" value="199"/><column index="3" value="219"/><column index="4" value="208"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="State" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="205"/><column index="2" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="df" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="121"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">DROP TABLE Project_ProjectType;
+DROP TABLE Employee_Project; 
+DROP TABLE Employees;
+DROP TABLE Salaries;
+DROP TABLE Projects;
 DROP TABLE Managers;
 DROP TABLE Budgets;
 DROP TABLE ProjectTypes;
 DROP TABLE Clients;
-DROP TABLE Employees;
-DROP TABLE Projects;
-DROP TABLE Employee_Project; 
-DROP TABLE Project_ProjectType;
 
 CREATE TABLE Salaries(
 YearsInCompany INTEGER NOT NULL,
@@ -26,10 +26,10 @@ Email CHAR(64),
 PhoneNumber CHAR(20) 
 );
 
-CREATE TABLE Budgets (
-  Duration TIME NOT NULL PRIMARY KEY,
-  Budget REAL
-);
+CREATE TABLE Budgets (
+  Duration TIME NOT NULL PRIMARY KEY,
+  Budget REAL
+);
 
 
 CREATE TABLE ProjectTypes(
@@ -49,7 +49,7 @@ PhoneNumber Char(20)
 );
 
 CREATE TABLE Employees(
-EmployeeID INTEGER NOT NULL,
+EmployeeID INTEGER NOT NULL PRIMARY KEY,
 ManagerID INTEGER,
 EmployeeName Char(100),
 StreetAddress Char(128),
@@ -61,7 +61,7 @@ Email Char(20),
 SSN Char(20),
 Specialization Char(64),
 YearsInCompany INTEGER,
-FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
 FOREIGN KEY (Specialization, YearsInCompany) REFERENCES Salaries (Specialization, YearsInCompany)
 
 );
@@ -105,11 +105,6 @@ INSERT INTO Managers (ManagerID, ManagerName, StreetAddress, City, State, ZipCod
 (2, 'John Doe', '456 Elmentary St', 'Albany', 'NY', 67890, 'jdoe@gmail.com', '(408) 890-1234'),
 (3, 'Bob Jackson', '789 Oakgrove St', 'Dallas', 'TX', 13579, 'bjackson@gmail.com', '(408) 246-1357');
 
-INSERT INTO ProjectTypes (ProjectType) VALUES 
-('Web Development'),
-('AI'),
-('Mobile Development');
-
 INSERT INTO Clients (ClientID, ClientName, ClientType, StreetAddress, City, State, ZipCode, Email, PhoneNumber) VALUES 
 (1, 'Microsoft', 'Tech Corporation', '789 Maple St', 'Los Angeles', 'CA', 54321, 'microsoft@gmail.com', '(408) 789-1234'),
 (2, 'OpenAi', 'Artificial Intelligence', '321 Pine St', 'Westvalley', 'CA', 24680, 'openai@gmail.com', '(408) 456-7890'),
@@ -120,25 +115,31 @@ INSERT INTO Clients (ClientID, ClientName, ClientType, StreetAddress, City, Stat
  (5, 'Front-end developer', 70000.00),
  (3, 'AI developer', 85000.00);
 
-INSERT INTO Budgets (Duration, Budget) VALUES 
-('1 month', 50000.00),
-('6 months', 250000.00),
-('1 year', 500000.00);
 
 INSERT INTO Employees (EmployeeID, ManagerID, EmployeeName, StreetAddress, City, State, ZipCode, PhoneNumber, Email, SSN, Specialization, YearsInCompany) VALUES 
 (01, 1, 'Minse Se', '456 Elm St', 'Albany', 'NY', 67890, '(555) 123-4567', 'minse@email.com', '123-45-6789', 'Back-end developer', 2),
 (02, 1, 'Saim Smith', '123 Main St', 'San Jose', 'CA', 12345, '(555) 890-1234', 'saimsmith@email.com', '234-56-7890', 'Front-end developer', 5),
 (03, 2, 'Justin Vu', '789 Oak St', 'Dallas ', 'TX', 13579, '(555) 246-1357', 'justinVu@email.com', '345-67-8901', 'AI developer', 3);
+
+INSERT INTO Budgets (Duration, Budget) VALUES 
+('1 month', 50000.00),
+('6 months', 250000.00),
+('1 year', 500000.00);
 
 INSERT INTO Projects (ProjectID, ManagerID, ClientID, ProjectName, ProjectDescription, StartDate, EndDate, Duration) VALUES 
-(001, 1, 2, 'Website development', 'Designing a new feature for Microsoft Edge', '2023-05-01', '2023-08-01', '3 months'),
-(002, 2, 2, 'AI Quality', 'Improving an AI model', '2023-06-01', '2023-08-01', '2 months'),
-(003,3,  3, 'ONE.sjsu', 'Redesigning a website','2023-01-01','2023-12-01', '11 months');
+(001, 1, 2, 'Website development', 'Designing a new feature for Microsoft Edge', '2023-05-01', '2023-06-01', '1 month'),
+(002, 2, 2, 'AI Quality', 'Improving an AI model', '2023-06-01', '2023-12-01', '6 months'),
+(003,3,  3, 'ONE.sjsu', 'Redesigning a website','2023-01-01','2024-1-01', '1 year');
 
 
 INSERT INTO Employee_Project (EmployeeID, ProjectID) VALUES 
 (01, 001),
-(02, 002);
+(02, 002);
+
+INSERT INTO ProjectTypes (ProjectType) VALUES 
+('Web Development'),
+('AI'),
+('Mobile Development');
 
 INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES 
 ('Web Development', 1),
