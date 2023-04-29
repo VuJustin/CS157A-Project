@@ -1,0 +1,146 @@
+DROP TABLE Project_ProjectType;
+DROP TABLE Employee_Project; 
+DROP TABLE Employees;
+DROP TABLE Salaries;
+DROP TABLE Projects;
+DROP TABLE Managers;
+DROP TABLE Budgets;
+DROP TABLE ProjectTypes;
+DROP TABLE Clients;
+
+CREATE TABLE Salaries(
+YearsInCompany INTEGER NOT NULL,
+Specialization CHAR (64) NOT NULL,
+Salary REAL,
+PRIMARY KEY (YearsInCompany, Specialization)
+);
+
+CREATE TABLE Managers( 
+ManagerID INTEGER NOT NULL PRIMARY KEY,
+ManagerName CHAR(100),
+StreetAddress CHAR(128),
+City CHAR(100),
+State CHAR(64),
+ZipCode INTEGER,
+Email CHAR(64),
+PhoneNumber CHAR(20) 
+);
+
+CREATE TABLE Budgets (
+  Duration TIME NOT NULL PRIMARY KEY,
+  Budget REAL
+);
+
+
+CREATE TABLE ProjectTypes(
+ProjectType CHAR(64) NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE Clients(
+ClientID INTEGER NOT NULL PRIMARY KEY,
+ClientName Char(100),
+ClientType Char(64),
+StreetAddress Char(128),
+City Char(64),
+State Char(64),
+ZipCode INTEGER,
+Email Char(64),
+PhoneNumber Char(20)
+);
+
+CREATE TABLE Employees(
+EmployeeID INTEGER NOT NULL PRIMARY KEY,
+ManagerID INTEGER,
+EmployeeName Char(100),
+StreetAddress Char(128),
+City Char(100),
+State Char(64),
+ZipCode INTEGER,
+PhoneNumber Char(20),
+Email Char(20),
+SSN Char(20),
+Specialization Char(64),
+YearsInCompany INTEGER,
+FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+FOREIGN KEY (Specialization, YearsInCompany) REFERENCES Salaries (Specialization, YearsInCompany)
+
+);
+
+CREATE TABLE Projects(
+ProjectID INTEGER NOT NULL PRIMARY KEY,
+ManagerID INTEGER,
+ClientID INTEGER,
+ProjectName Char(64),
+ProjectDescription Char(128),
+StartDate Date,
+EndDate Date,
+Duration time,
+FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+FOREIGN KEY (ClientID) REFERENCES Clients (ClientID),
+FOREIGN KEY (Duration) REFERENCES Budgets (Duration)
+);
+
+CREATE TABLE Employee_Project(
+EmployeeID INTEGER NOT NULL,
+ProjectID INTEGER NOT NULL,
+PRIMARY KEY(EmployeeID, ProjectID),
+FOREIGN KEY(EmployeeID) REFERENCES Employees (EmployeeID),
+FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+);
+
+CREATE TABLE Project_ProjectType(
+ProjectType CHAR(64) NOT NULL,
+ProjectID INTEGER NOT NULL,
+PRIMARY KEY (ProjectType, ProjectID),
+FOREIGN KEY (ProjectType) REFERENCES ProjectTypes (ProjectType),
+FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+);
+
+-- Insert first tables that don't have any FK constraints
+-- Next, tables w/FK contraints
+-- Intersection tables last
+-- 
+INSERT INTO Managers (ManagerID, ManagerName, StreetAddress, City, State, ZipCode, Email, PhoneNumber) VALUES 
+(1, 'John Smith', '123 Main St', 'San Jose', 'CA', 12345, 'jsmith@gmail.com', '(408) 123-4567'),
+(2, 'John Doe', '456 Elmentary St', 'Albany', 'NY', 67890, 'jdoe@gmail.com', '(408) 890-1234'),
+(3, 'Bob Jackson', '789 Oakgrove St', 'Dallas', 'TX', 13579, 'bjackson@gmail.com', '(408) 246-1357');
+
+INSERT INTO Clients (ClientID, ClientName, ClientType, StreetAddress, City, State, ZipCode, Email, PhoneNumber) VALUES 
+(1, 'Microsoft', 'Tech Corporation', '789 Maple St', 'Los Angeles', 'CA', 54321, 'microsoft@gmail.com', '(408) 789-1234'),
+(2, 'OpenAi', 'Artificial Intelligence', '321 Pine St', 'Westvalley', 'CA', 24680, 'openai@gmail.com', '(408) 456-7890'),
+(3, 'Jahan Ghofraniha', 'SJSU', '456 Oak St', 'San Jose', 'CA', 97531, 'jgho@gmail.com', '(408) 123-4567');
+
+ INSERT INTO Salaries (YearsInCompany, Specialization, Salary) VALUES 
+ (2, 'Back-end developer', 75000.00),
+ (5, 'Front-end developer', 70000.00),
+ (3, 'AI developer', 85000.00);
+
+
+INSERT INTO Employees (EmployeeID, ManagerID, EmployeeName, StreetAddress, City, State, ZipCode, PhoneNumber, Email, SSN, Specialization, YearsInCompany) VALUES 
+(01, 1, 'Minse Se', '456 Elm St', 'Albany', 'NY', 67890, '(555) 123-4567', 'minse@email.com', '123-45-6789', 'Back-end developer', 2),
+(02, 1, 'Saim Smith', '123 Main St', 'San Jose', 'CA', 12345, '(555) 890-1234', 'saimsmith@email.com', '234-56-7890', 'Front-end developer', 5),
+(03, 2, 'Justin Vu', '789 Oak St', 'Dallas ', 'TX', 13579, '(555) 246-1357', 'justinVu@email.com', '345-67-8901', 'AI developer', 3);
+
+INSERT INTO Budgets (Duration, Budget) VALUES 
+('1 month', 50000.00),
+('6 months', 250000.00),
+('1 year', 500000.00);
+
+INSERT INTO Projects (ProjectID, ManagerID, ClientID, ProjectName, ProjectDescription, StartDate, EndDate, Duration) VALUES 
+(001, 1, 2, 'Website development', 'Designing a new feature for Microsoft Edge', '2023-05-01', '2023-06-01', '1 month'),
+(002, 2, 2, 'AI Quality', 'Improving an AI model', '2023-06-01', '2023-12-01', '6 months'),
+(003,3,  3, 'ONE.sjsu', 'Redesigning a website','2023-01-01','2024-1-01', '1 year');
+
+
+INSERT INTO Employee_Project (EmployeeID, ProjectID) VALUES 
+(01, 001),
+(02, 002);
+
+INSERT INTO ProjectTypes (ProjectType) VALUES 
+('Web Development'),
+('AI'),
+('Mobile Development');
+
+INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES 
+('Web Development', 1),
+('AI', 2);
