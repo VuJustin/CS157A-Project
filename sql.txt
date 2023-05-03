@@ -1,0 +1,105 @@
+DROP TABLE IF EXISTS Project_ProjectType;
+DROP TABLE IF EXISTS Employee_Project; 
+DROP TABLE IF EXISTS Employees;
+DROP TABLE IF EXISTS Salaries;
+DROP TABLE IF EXISTS Projects;
+DROP TABLE IF EXISTS Managers;
+DROP TABLE IF EXISTS Budgets;
+DROP TABLE IF EXISTS ProjectTypes;
+DROP TABLE IF EXISTS Clients;
+
+CREATE TABLE Salaries(
+  YearsInCompany INTEGER NOT NULL,
+  Specialization VARCHAR(64) NOT NULL,
+  Salary REAL,
+  PRIMARY KEY (YearsInCompany, Specialization)
+);
+
+CREATE TABLE Managers( 
+  ManagerID INTEGER NOT NULL PRIMARY KEY,
+  ManagerName VARCHAR(100),
+  StreetAddress VARCHAR(128),
+  City VARCHAR(100),
+  State VARCHAR(64),
+  ZipCode INTEGER,
+  Email VARCHAR(64),
+  PhoneNumber VARCHAR(20) 
+);
+
+CREATE TABLE Budgets (
+  Duration TIME NOT NULL PRIMARY KEY,
+  Budget REAL
+);
+
+CREATE TABLE ProjectTypes(
+  ProjectType VARCHAR(64) NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE Clients(
+  ClientID INTEGER NOT NULL PRIMARY KEY,
+  ClientName VARCHAR(100),
+  ClientType VARCHAR(64),
+  StreetAddress VARCHAR(128),
+  City VARCHAR(64),
+  State VARCHAR(64),
+  ZipCode INTEGER,
+  Email VARCHAR(64),
+  PhoneNumber VARCHAR(20)
+);
+
+
+CREATE TABLE Employees(
+EmployeeID INTEGER NOT NULL PRIMARY KEY,
+ManagerID INTEGER,
+EmployeeName Char(100),
+StreetAddress Char(128),
+City Char(100),
+State Char(64),
+ZipCode INTEGER,
+PhoneNumber Char(20),
+Email Char(20),
+SSN Char(20),
+Specialization VARCHAR(64),
+YearsInCompany INTEGER,
+FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+FOREIGN KEY (Specialization, YearsInCompany) REFERENCES Salaries (Specialization, YearsInCompany)
+
+);
+
+CREATE TABLE Projects(
+ProjectID INTEGER NOT NULL PRIMARY KEY,
+ManagerID INTEGER,
+ClientID INTEGER,
+ProjectName VARCHAR(64),
+ProjectDescription Char(128),
+StartDate Date,
+EndDate Date,
+Duration time,
+FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+FOREIGN KEY (ClientID) REFERENCES Clients (ClientID),
+FOREIGN KEY (Duration) REFERENCES Budgets (Duration)
+);
+
+CREATE TABLE Employee_Project(
+EmployeeID INTEGER NOT NULL,
+ProjectID INTEGER NOT NULL,
+PRIMARY KEY(EmployeeID, ProjectID),
+FOREIGN KEY(EmployeeID) REFERENCES Employees (EmployeeID),
+FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+);
+
+CREATE TABLE Project_ProjectType(
+ProjectType VARCHAR(64) NOT NULL,
+ProjectID INTEGER NOT NULL,
+PRIMARY KEY (ProjectType, ProjectID),
+FOREIGN KEY (ProjectType) REFERENCES ProjectTypes (ProjectType),
+FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+);
+
+INSERT INTO Managers (ManagerID, ManagerName, StreetAddress, City, State, ZipCode, Email, PhoneNumber) VALUES 
+(1, 'John Smith', '123 Main St', 'San Jose', 'CA', 12345, 'jsmith@gmail.com', '(408) 123-4567'),
+(2, 'John Doe', '456 Elmentary St', 'Albany', 'NY', 67890, 'jdoe@gmail.com', '(408) 890-1234'),
+(3, 'Bob Jackson', '789 Oakgrove St', 'Dallas', 'TX', 13579, 'bjackson@gmail.com', '(408) 246-1357');
+
+
+Select * from Managers;
