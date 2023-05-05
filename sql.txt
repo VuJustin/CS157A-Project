@@ -1,29 +1,21 @@
-DROP TABLE Project_ProjectType;
-DROP TABLE Employee_Project; 
-DROP TABLE Employees;
-DROP TABLE Salaries;
-DROP TABLE Projects;
-DROP TABLE Managers;
-DROP TABLE Budgets;
-DROP TABLE ProjectTypes;
-DROP TABLE Clients;
+--create database osc;
 
 CREATE TABLE Salaries(
-YearsInCompany INTEGER NOT NULL,
-Specialization CHAR (64) NOT NULL,
-Salary REAL,
-PRIMARY KEY (YearsInCompany, Specialization)
+	YearsInCompany INTEGER NOT NULL,
+	Specialization CHAR (64) NOT NULL,
+	Salary REAL,
+	CONSTRAINT PK_Salaries PRIMARY KEY (Specialization, YearsInCompany)
 );
 
 CREATE TABLE Managers( 
-ManagerID INTEGER NOT NULL PRIMARY KEY,
-ManagerName CHAR(100),
-StreetAddress CHAR(128),
-City CHAR(100),
-State CHAR(64),
-ZipCode INTEGER,
-Email CHAR(64),
-PhoneNumber CHAR(20) 
+	ManagerID INTEGER NOT NULL PRIMARY KEY,
+	ManagerName CHAR(100),
+	StreetAddress CHAR(128),
+	City CHAR(100),
+	State CHAR(64),
+	ZipCode INTEGER,
+	Email CHAR(64),
+	PhoneNumber CHAR(20) 
 );
 
 CREATE TABLE Budgets (
@@ -33,67 +25,67 @@ CREATE TABLE Budgets (
 
 
 CREATE TABLE ProjectTypes(
-ProjectType CHAR(64) NOT NULL PRIMARY KEY
+	ProjectType CHAR(64) NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE Clients(
-ClientID INTEGER NOT NULL PRIMARY KEY,
-ClientName Char(100),
-ClientType Char(64),
-StreetAddress Char(128),
-City Char(64),
-State Char(64),
-ZipCode INTEGER,
-Email Char(64),
-PhoneNumber Char(20)
+	ClientID INTEGER NOT NULL PRIMARY KEY,
+	ClientName Char(100),
+	ClientType Char(64),
+	StreetAddress Char(128),
+	City Char(64),
+	State Char(64),
+	ZipCode INTEGER,
+	Email Char(64),
+	PhoneNumber Char(20)
 );
 
 CREATE TABLE Employees(
-EmployeeID INTEGER NOT NULL PRIMARY KEY,
-ManagerID INTEGER,
-EmployeeName Char(100),
-StreetAddress Char(128),
-City Char(100),
-State Char(64),
-ZipCode INTEGER,
-PhoneNumber Char(20),
-Email Char(20),
-SSN Char(20),
-Specialization Char(64),
-YearsInCompany INTEGER,
-FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
-FOREIGN KEY (Specialization, YearsInCompany) REFERENCES Salaries (Specialization, YearsInCompany)
+	EmployeeID INTEGER NOT NULL PRIMARY KEY,
+	ManagerID INTEGER,
+	EmployeeName Char(100),
+	StreetAddress Char(128),
+	City Char(100),
+	State Char(64),
+	ZipCode INTEGER,
+	PhoneNumber Char(20),
+	Email Char(20),
+	SSN Char(20),
+	Specialization Char(64),
+	YearsInCompany INTEGER,
+	FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+	CONSTRAINT FK_EMPLOYEES FOREIGN KEY(Specialization, YearsInCompany) REFERENCES Salaries(Specialization, YearsInCompany)
 
 );
 
 CREATE TABLE Projects(
-ProjectID INTEGER NOT NULL PRIMARY KEY,
-ManagerID INTEGER,
-ClientID INTEGER,
-ProjectName Char(64),
-ProjectDescription Char(128),
-StartDate Date,
-EndDate Date,
-Duration time,
-FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
-FOREIGN KEY (ClientID) REFERENCES Clients (ClientID),
-FOREIGN KEY (Duration) REFERENCES Budgets (Duration)
+	ProjectID INTEGER NOT NULL PRIMARY KEY,
+	ManagerID INTEGER,
+	ClientID INTEGER,
+	ProjectName Char(64),
+	ProjectDescription Char(128),
+	StartDate Date,
+	EndDate Date,
+	Duration time,
+	FOREIGN KEY (ManagerID) REFERENCES Managers (ManagerID),
+	FOREIGN KEY (ClientID) REFERENCES Clients (ClientID),
+	FOREIGN KEY (Duration) REFERENCES Budgets (Duration)
 );
 
 CREATE TABLE Employee_Project(
-EmployeeID INTEGER NOT NULL,
-ProjectID INTEGER NOT NULL,
-PRIMARY KEY(EmployeeID, ProjectID),
-FOREIGN KEY(EmployeeID) REFERENCES Employees (EmployeeID),
-FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+	EmployeeID INTEGER NOT NULL,
+	ProjectID INTEGER NOT NULL,
+	PRIMARY KEY(EmployeeID, ProjectID),
+	FOREIGN KEY(EmployeeID) REFERENCES Employees (EmployeeID),
+	FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
 );
 
 CREATE TABLE Project_ProjectType(
-ProjectType CHAR(64) NOT NULL,
-ProjectID INTEGER NOT NULL,
-PRIMARY KEY (ProjectType, ProjectID),
-FOREIGN KEY (ProjectType) REFERENCES ProjectTypes (ProjectType),
-FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
+	ProjectType CHAR(64) NOT NULL,
+	ProjectID INTEGER NOT NULL,
+	PRIMARY KEY (ProjectType, ProjectID),
+	FOREIGN KEY (ProjectType) REFERENCES ProjectTypes (ProjectType),
+	FOREIGN KEY (ProjectID) REFERENCES Projects (ProjectID)
 );
 
 -- Insert first tables that don't have any FK constraints
@@ -144,3 +136,5 @@ INSERT INTO ProjectTypes (ProjectType) VALUES
 INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES 
 ('Web Development', 1),
 ('AI', 2);
+
+-- Queries
