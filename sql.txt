@@ -1,4 +1,15 @@
---create database osc;
+create database osc;
+
+DROP TABLE IF EXISTS Project_ProjectType;
+DROP TABLE IF EXISTS Employee_Project; 
+DROP TABLE IF EXISTS Employees;
+DROP TABLE IF EXISTS Salaries;
+DROP TABLE IF EXISTS Projects;
+DROP TABLE IF EXISTS Managers;
+DROP TABLE IF EXISTS Budgets;
+DROP TABLE IF EXISTS ProjectTypes;
+DROP TABLE IF EXISTS Clients;
+
 
 CREATE TABLE Salaries(
 	YearsInCompany INTEGER NOT NULL,
@@ -139,4 +150,3 @@ INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES
 
 -- Queries
 SELECT * FROM budgets;
-
