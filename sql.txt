@@ -150,3 +150,7 @@ INSERT INTO Project_ProjectType (ProjectType, ProjectID) VALUES
 
 -- Queries
 SELECT * FROM budgets;
+SELECT ClientName, ClientType FROM Clients;
+INSERT INTO Managers (ManagerID, ManagerName, StreetAddress, City, State, ZipCode, Email, PhoneNumber) 
+VALUES (4, 'Jane Smith', '456 Main St', 'New York', 'NY', 54321, 'jane.smith@gmail.com', '(212) 555-1234');
+
